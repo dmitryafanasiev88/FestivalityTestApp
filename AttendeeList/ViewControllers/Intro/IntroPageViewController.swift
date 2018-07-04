@@ -32,6 +32,15 @@ class IntroPageViewController: UIViewController {
         titleLabel?.text = labelsData.title
         subtitleLabel?.text = labelsData.subtitle
         
+        // Customize buttons layer props
+        skipButton?.layer.cornerRadius = 8
+        skipButton?.layer.borderWidth = 2
+        skipButton?.layer.borderColor = UIColor.black.cgColor
+        
+        enableButton?.layer.cornerRadius = 8
+        enableButton?.layer.borderWidth = 2
+        enableButton?.layer.borderColor = UIColor.black.cgColor
+        
         // Customize buttons in the callback,
         // because NotificationsManager requires callback to get the actual status
         viewModel.getButtonsCustomizationData { [weak self] (actionTitle, skipTitle) in
